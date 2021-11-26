@@ -5,7 +5,13 @@ import Section from './Section'
 function Home() {
     return (
         <Container>
-            <Section />
+            <Section 
+                title = "Model-S"
+                description = "Order Online for Touchless Deliery"
+                backgroundImg = "model-s.jpg"
+                leftBtnText = "Custom Order"
+                rightBtnText = "Existing Inventory"
+            />
             <Section />
         </Container>
     )

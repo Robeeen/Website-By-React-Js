@@ -19,6 +19,20 @@ function Home() {
                 leftBtnText = "Custom Order"
                 rightBtnText = "Existing Inventory"
                 />
+            <Section 
+                title = "Model-3"
+                description = "Order Online for Touchless Deliery"
+                backgroundImg = "model-3.jpg"
+                leftBtnText = "Custom Order"
+                rightBtnText = "Existing Inventory"
+                />
+            <Section 
+                title = "Model-X"
+                description = "Order Online for Touchless Deliery"
+                backgroundImg = "model-x.jpg"
+                leftBtnText = "Custom Order"
+                rightBtnText = "Existing Inventory"
+                />    
         </Container>
     )
 }

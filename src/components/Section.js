@@ -58,6 +58,7 @@ const LeftButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 8px;
 
 
 `
@@ -68,7 +69,8 @@ const DownArrow = styled.img`
     margin-top: 20px;
     height: 40px;
     align-items: center;
-    
+    animation: animateDown infinite 1.5s;
+    overflow-x: hidden;
 `
    
 

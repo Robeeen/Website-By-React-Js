@@ -12,7 +12,13 @@ function Home() {
                 leftBtnText = "Custom Order"
                 rightBtnText = "Existing Inventory"
             />
-            <Section />
+            <Section 
+                title = "Model-Y"
+                description = "Order Online for Touchless Deliery"
+                backgroundImg = "model-y.jpg"
+                leftBtnText = "Custom Order"
+                rightBtnText = "Existing Inventory"
+                />
         </Container>
     )
 }

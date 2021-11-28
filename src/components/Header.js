@@ -20,9 +20,9 @@ function Header() {
             </Menu>
             <RightMenu>
                 <a href="/">SHOP</a>
-                <a href="/">Tesla accounts</a>
-                <CustomMenu onClick={()=>setBurgerState(true)} />
+                <a href="/">Tesla accounts</a>                
             </RightMenu>            
+            <CustomMenu onClick={()=>setBurgerState(true)} />
             <BurgerNav show={BurgerState}>
                 <CloseWrapper >
                 <CustomClose onClick={()=>setBurgerState(false)} />
@@ -92,6 +92,7 @@ const BurgerNav = styled.div`
     height: 400px;
     padding: 20px;
     display: ${props => props.show ? "block" : "none"};
+    transition: transform 1s;
     li{
         list-style:none;
         padding: 10px 0;    

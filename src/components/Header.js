@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -7,6 +7,8 @@ import CloseIcon from '@material-ui/icons/Close';
 //do not use  '@mui/icons-material/ -- instead use '@material-ui/icons/your-icons'
 
 function Header() {
+    const [BurgerState, setBurgerState] = useState(false);
+    
     return (
         <Container>
             <a href="/"><img src="/images/logo.svg" alt="Logo"/></a>
@@ -19,12 +21,11 @@ function Header() {
             <RightMenu>
                 <a href="/">SHOP</a>
                 <a href="/">Tesla accounts</a>
-
-            </RightMenu>
-            <CustomMenu />
-            <BurgerNav>
-                <CloseWrapper>
-                <CustomClose />
+                <CustomMenu onClick={()=>setBurgerState(true)} />
+            </RightMenu>            
+            <BurgerNav show={BurgerState}>
+                <CloseWrapper >
+                <CustomClose onClick={()=>setBurgerState(false)} />
                 </CloseWrapper>
                 <li><a href="#">Existing Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
@@ -89,8 +90,8 @@ const BurgerNav = styled.div`
     right: 0;
     z-index: 100;
     height: 400px;
-    opacity: .5;
     padding: 20px;
+    display: ${props => props.show ? "block" : "none"};
     li{
         list-style:none;
         padding: 10px 0;    
